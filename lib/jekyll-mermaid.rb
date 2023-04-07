@@ -7,7 +7,13 @@ module Jekyll
 
     def render(context)
       @config = context.registers[:site].config['mermaid']
-      "<script src=\"#{@config['src']}\"></script>"\
+      "<script type=\"module\">"\
+        "import mermaid from '#{@config['src']}';"\
+        "mermaid.initialize({"\
+            "startOnLoad: true,"\
+            "theme: '#{@config['theme']}'"\
+        "});"\
+      "</script>"\
       "<div class=\"mermaid\">#{super}</div>"
     end
   end
