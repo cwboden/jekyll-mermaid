@@ -20,11 +20,12 @@ Please see the [Jekyll documentation](http://jekyllrb.com/docs/plugins/#installi
 
 ## Config
 
-You'll need to update your `_config.yml` with the URL of the [mermaid](https://mermaid.js.org) source javascript file you want to use (relative or CDN) and a [theme](https://mermaid.js.org/config/theming.html#available-themes) (optional).
+You'll need to update your `_config.yml` with the URL of the [mermaid](https://mermaid.js.org) source javascript file you want to use (relative or CDN). The script is loaded as a module, so specify the `esm` version.
+Optionally, you can also set a [theme](https://mermaid.js.org/config/theming.html#available-themes).
 
 ```ruby
 mermaid:
-  src: 'path/to/mermaid.js'
+  src: 'path/to/mermaid.esm.[min].mjs'
   theme: 'dark'
 ```
 
