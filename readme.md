@@ -20,11 +20,12 @@ Please see the [Jekyll documentation](http://jekyllrb.com/docs/plugins/#installi
 
 ## Config
 
-You'll need to update your `_config.yml` with the location of the [mermaid](https://github.com/knsv/mermaid) source javascript file you want to use.
+You'll need to update your `_config.yml` with the URL of the [mermaid](https://mermaid.js.org) source javascript file you want to use (relative or CDN) and a [theme](https://mermaid.js.org/config/theming.html#available-themes) (optional).
 
 ```ruby
 mermaid:
   src: 'path/to/mermaid.js'
+  theme: 'dark'
 ```
 
 
